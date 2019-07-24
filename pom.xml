@@ -11,7 +11,16 @@
   </parent> 
   <artifactId>bhz-sys-facade</artifactId>
   <packaging>jar</packaging>
-
+<distributionManagement>
+    <!-- 用于上传的仓库 -->
+    <repository>
+        <!-- 这里的id需要和settings.xml中的server的id一致 -->
+        <id>nexus-snapshots</id>
+        <name>maven-snapshots</name>
+        <!-- third是一个hosted类型的仓库，用于存放第三方或自己的jar包 -->
+        <url>http://localhost:8081/repository/maven-snapshots/</url>
+    </repository>
+</distributionManagement>
   <name>bhz-sys-facade</name>
   <build>
     <finalName>bhz-sys-facade</finalName>
